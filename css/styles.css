@@ -3,9 +3,9 @@
     padding: 0;
     margin: 0;
     --bar-btn-color: rgb(69, 141, 249);
-    --accent-color: #ffd321e1;
-    --background-color: #d1d1d1;
-    --foreground-color: #f1f1f1;
+    --accent-color: #ffb121e1;
+    --background-color: #e5e8f1;
+    --foreground-color: #ffffff;
     --first-text-color: #fff;
     --second-text-color: #222;
     --hover-text-color: rgb(148, 148, 148);
@@ -83,4 +83,150 @@ a.sidebar-link {
 .sidebar-link:hover {
     text-decoration: underline;
     transition: 0.2 ease-in-out;
+}
+/* header */
+
+.header-row {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: var(--foreground-color);
+    box-shadow: 2px 2px 2px 2px #babcc5;
+    padding: 0.6rem 3rem;
+}
+/* header top row */
+.top-row {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-row: 1 / 2;
+    align-items: center;
+
+}
+
+.header-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.search-bar {
+    width: 80%;
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem;
+}
+
+.input-block {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-block {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.smol-pfp {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.smol-pfp:hover {
+    cursor: pointer;
+    border: 2px solid var(--bar-btn-color);
+}
+
+.bell {
+    border-radius: 50%;
+    transition: 0.2 ease-in-out;
+}
+
+.bell:hover {
+    cursor: pointer;
+    background-color: var(--background-color);
+}
+/* header bottom row */
+
+.bottom-row {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 0.6rem 0;
+    align-items: center;
+}
+
+.big-pfp {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.big-pfp:hover {
+    cursor: pointer;
+    border: 2px solid var(--bar-btn-color);
+}
+
+.tiny-greeting {
+    font-size: 1rem;
+}
+
+.user-greetings {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.fun-btns {
+    display: flex;
+    gap: 2rem;
+}
+
+.fun-btn {
+    width: 7rem;
+    height: 3rem;
+    background-color: var(--bar-btn-color);
+    color: var(--first-text-color);
+    border: none;
+    border-radius: 2rem;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: 0.2s ease-in-out;
+}
+
+.fun-btn:hover {
+    cursor: pointer;
+    background-color: rgb(58, 119, 210);
+}
+
+/* main content */
+
+.content-column {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+    background-color: var(--background-color);
+    padding: 1.2rem;
+    padding-top: 2rem;
+}
+
+.all-projects-block {
+    display: grid;
+    padding: 1rem 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.project-card {
+    padding: 2rem 1.4rem;
+    width: 60ch;
+    height: 14rem;
+    background-color: var(--foreground-color);
+    border-left: 0.5rem solid var(--accent-color);
+    border-radius: 0.6rem;
+}
+
+.project-description {
+    width: 36ch;
 }
