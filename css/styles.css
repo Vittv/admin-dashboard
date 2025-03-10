@@ -250,6 +250,7 @@ a.sidebar-link {
 }
 
 .card-icon:hover {
+    cursor: pointer;
     background-color: var(--background-color);
     border-radius: 50%;
 }
