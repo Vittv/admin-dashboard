@@ -8,7 +8,7 @@
     --foreground-color: #ffffff;
     --first-text-color: #fff;
     --second-text-color: #222;
-    --hover-text-color: rgb(148, 148, 148);
+    --hover-text-color: rgb(101, 100, 100);
 }
 
 body {
@@ -151,7 +151,7 @@ a.sidebar-link {
 
 .bottom-row {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 70% 30%;
     padding: 0.6rem 0;
     align-items: center;
 }
@@ -200,7 +200,7 @@ a.sidebar-link {
 }
 
 /* main content */
-
+/* first column */
 .content-column {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -208,6 +208,10 @@ a.sidebar-link {
     background-color: var(--background-color);
     padding: 1.2rem;
     padding-top: 2rem;
+}
+
+.column-title {
+    font-size: 1.4rem;
 }
 
 .all-projects-block {
@@ -219,14 +223,96 @@ a.sidebar-link {
 }
 
 .project-card {
-    padding: 2rem 1.4rem;
-    width: 60ch;
-    height: 14rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.4rem;
     background-color: var(--foreground-color);
     border-left: 0.5rem solid var(--accent-color);
     border-radius: 0.6rem;
 }
 
 .project-description {
-    width: 36ch;
+    padding-top: 0.4rem;
+    color: var(--hover-text-color);
+    width: 40ch;
+    height: 7rem;
+}
+
+.icons-block {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.card-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.card-icon:hover {
+    background-color: var(--background-color);
+    border-radius: 50%;
+}
+
+/* second column */
+
+.second-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.announcements-column {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 1rem;
+    padding-top: 1.4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: var(--foreground-color);
+    border-radius: 0.6rem;
+}
+
+.announcement-spot {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    background-color: var(--foreground-color);
+}
+
+.announcement-description {
+    padding-top: 0.4rem;
+    color: var(--hover-text-color);
+} 
+
+.announcement-one,
+.announcement-two {
+    border-bottom: 1px solid rgb(197, 197, 197);
+    padding-bottom: 1rem;
+}
+
+/* trending */
+
+.trending-title {
+    padding: 1rem 0;
+}
+
+.all-trending-users {
+    padding: 1rem 1.4rem;
+    background-color: var(--foreground-color);
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+}
+
+.user-block {
+    display: flex;
+    padding-bottom: 0.4rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+.handle {
+    font-weight: 700;
+}
+
+.userapp {
+    color: var(--hover-text-color);
 }
