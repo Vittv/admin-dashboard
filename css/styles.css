@@ -173,6 +173,7 @@ a.sidebar-link {
 
 .tiny-greeting {
     font-size: 1rem;
+    font-weight: 500;
 }
 
 .user-greetings {
@@ -187,7 +188,7 @@ a.sidebar-link {
 }
 
 .fun-btn {
-    width: 7rem;
+    width: 6.8rem;
     height: 2.5rem;
     background-color: var(--bar-btn-color);
     color: var(--first-text-color);
