@@ -18,23 +18,23 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 5fr;
+    height: 100%;
 }
 /* sidebar */
 .sidebar {
-    display: grid;
-    /* grid-template-columns: 1fr 3fr; */
-    grid-template-rows: 120px 300px 120px 100px;
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
     background-color: var(--bar-btn-color);
     color: var(--foreground-color);
 }
 
 .sidebar-medium {
-    grid-row: 2 / 3;
+    padding-top: 4rem;
 }
 
 .sidebar-bottom {
-    grid-row: 4 / 5;
+    padding-top: 4rem;
 }
 
 .sidebar-medium,
@@ -84,11 +84,12 @@ a.sidebar-link {
     text-decoration: underline;
     transition: 0.2 ease-in-out;
 }
+
 /* header */
 
 .header-row {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     background-color: var(--foreground-color);
     box-shadow: 2px 2px 2px 2px #babcc5;
     padding: 0.6rem 3rem;
@@ -96,10 +97,9 @@ a.sidebar-link {
 /* header top row */
 .top-row {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: minmax(200px, 4fr) 1fr;
     grid-row: 1 / 2;
     align-items: center;
-
 }
 
 .header-icon {
@@ -151,6 +151,7 @@ a.sidebar-link {
 
 .bottom-row {
     display: grid;
+    grid-auto-flow: column;
     grid-template-columns: 70% 30%;
     padding: 0.6rem 0;
     align-items: center;
@@ -200,7 +201,6 @@ a.sidebar-link {
 }
 
 /* main content */
-/* first column */
 .content-column {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -217,7 +217,7 @@ a.sidebar-link {
 .all-projects-block {
     display: grid;
     padding: 1rem 0;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1rem;
 }
@@ -228,10 +228,12 @@ a.sidebar-link {
     padding: 1rem 1.4rem;
     background-color: var(--foreground-color);
     border-left: 0.5rem solid var(--accent-color);
-    border-radius: 0.6rem;
+    border-radius: 0.5rem;
+    height: 211px;
 }
 
 .project-description {
+    font-size: 1rem;
     padding-top: 0.4rem;
     color: var(--hover-text-color);
     width: 40ch;
@@ -257,11 +259,6 @@ a.sidebar-link {
 
 /* second column */
 
-.second-column {
-    display: flex;
-    flex-direction: column;
-}
-
 .announcements-column {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
@@ -270,7 +267,7 @@ a.sidebar-link {
     padding-left: 2rem;
     padding-right: 2rem;
     background-color: var(--foreground-color);
-    border-radius: 0.6rem;
+    border-radius: 0.5rem;
 }
 
 .announcement-spot {
@@ -297,15 +294,17 @@ a.sidebar-link {
 }
 
 .all-trending-users {
-    padding: 1rem 1.4rem;
+    padding: 1.38rem 1.4rem;
     background-color: var(--foreground-color);
-    border-radius: 0.4rem;
+    border-radius: 0.5rem;
     font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .user-block {
     display: flex;
-    padding-bottom: 0.4rem;
+    padding-bottom: 1rem;
     gap: 1rem;
     align-items: center;
 }
