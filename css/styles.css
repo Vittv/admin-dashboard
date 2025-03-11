@@ -84,6 +84,24 @@ a.sidebar-link {
     transition: 0.2 ease-in-out;
 }
 
+.credits-bottom {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    padding-top: 10rem;
+    padding-left: 1rem;
+}
+
+.github-icon {
+    font-size: 1.8rem;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.github-icon:hover {
+    color: var(--background-color);
+}
+
 /* header */
 
 .header-row {
